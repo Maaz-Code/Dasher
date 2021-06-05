@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.user h1 {
+    padding: 10px;
+}
+.user h3 {
+    padding-bottom: 10px;
+}
+
+main {
+    height: 100vh;
+    background: linear-gradient(to right top, #65dfc9 ,#6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 70%;
+    /* opacity: 50%; we can't use this as all elements inside glass class will be then opaque.*/
+    border-radius: 2rem; /*rem instead of px as it looks same on anyone else's computer too */
+    z-index: 3;
+    background: linear-gradient(
+                to right bottom, 
+                rgba(255,255,255,0.7),
+                rgba(255,255,255,0.3));
+    display: flex;
+}
+
+.circle1,.circle2{
+    background: rgb(217, 241, 245);
+    height: 30vh;
+    width: 30vh;
+    opacity: 40%;
+    position: absolute;
+    border-radius: 10rem;
+    z-index: 2;
+    filter: blur(2px);
+}
+.circle1 {
+    bottom: 3%;
+    right: 80%;
+}
+
+.circle2 {
+    top: 2%;
+    left: 75%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.user img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.dashboard {
+    background: linear-gradient(
+                to right bottom, 
+                rgba(255,255,255,0.7),
+                rgba(255,255,255,0.2));
+    min-height: 80vh;
+    width: 30%;
+    border-radius: 2rem;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.link:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+.link {
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 40%;
+}
+
+.card {
+    background: linear-gradient(
+                to right bottom, 
+                rgba(255,255,255,0.6),
+                rgba(255,255,255,0.8));
+    display: flex;
+    height: 13vh;
+    width: 65vh;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 20px rgba(11, 12, 12, 0.3);
+}
+
+.games {
+    width: 70%;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info {
+    flex: 2;
+    padding: 10px;
+}
+
+.progress {
+    flex: 1;
+}
+
+.current {
+    height: 25vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.current input {
+    border-radius: 2rem;
+    border: none;
+    background: linear-gradient(
+                to right bottom, 
+                rgba(255,255,255,0.8),
+                rgba(255,255,255,0.5));
+    width: 45%;
+    height: 15%;
+    padding: 5px;
+}
+
+input:hover, input:focus {
+    width: 55%;
+    height: 17%;
+    transition: 0.5s;
+    outline: none;
+}
