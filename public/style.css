@@ -138,6 +138,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    flex: 2;
 }
 
 .current input {
@@ -147,14 +148,21 @@ main {
                 to right bottom, 
                 rgba(255,255,255,0.8),
                 rgba(255,255,255,0.5));
-    width: 45%;
-    height: 15%;
+    width: 50%;
+    height: 13%;
     padding: 5px;
 }
 
 input:hover, input:focus {
-    width: 55%;
-    height: 17%;
+    width: 60%;
+    height: 16%;
     transition: 0.5s;
     outline: none;
+}
+
+.upper {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+    padding-right: 15px;
 }
