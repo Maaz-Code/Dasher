@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-clientid" content="1006037021445-ir4f3iperpvb7mf0rthqv0fibmu0lmrc.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <title>Dasher</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+    <script>
+   // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAgmTRhBdL6czGlssRJmQEpss_rt_Og128",
+        authDomain: "glassmorphism-4122001.firebaseapp.com",
+        projectId: "glassmorphism-4122001",
+        storageBucket: "glassmorphism-4122001.appspot.com",
+        messagingSenderId: "1006037021445",
+        appId: "1:1006037021445:web:0118acd9a9fb35ec287d6c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+   </script>
+   <script src="app.js" defer></script>
+
+   <title>Dasher</title>
 </head>
 <body>
-    <main> 
+    <main>
         <div class="glass">
             <div class="dashboard">
                 <div class="user">
@@ -50,7 +71,6 @@
                         <br>
                         <input type="text" placeholder="Search" />
                     </div>
-                    <div class="g-signin2" data-onsucess="onSignIn" data-width="150" data-height="40"></div>
                 </div>
                 <div class="details">
                     <div class="card">
@@ -88,6 +108,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div id="whenSignedOut">
+                <button id="signInbtn">Sign in with Google</button>
+            </div>
+            <div id="whenSignedIn" hidden="true">
+                <div id="userDetails"></div>
+                <button id="signOutbtn">Sign out</button>
             </div>
         </div>
     </main>
