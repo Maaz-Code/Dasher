@@ -37,30 +37,28 @@
         <div class="glass">
             <div class="dashboard">
                 <div class="user">
-                    <br>
                     <img src="./images/person.jpg" alt="avatar">
-                    <h1>Maaz Ahmed</h1>
-                    <h3>Student and Gamer</h3>
+                    <div id="userDetails"></div>
                 </div>
                 <div class="socials">
                     <div class="link">
                     <a href="http://github.com/Maaz-Code" target="_blank">
-                        <img src="images/github.png" alt="github"></a>
+                        <img src="images/github.png" alt="github" title="Github"></a>
                     </div>
                     <br>
                     <div class="link">
                     <a href="http://youtube.com/" target="_blank">
-                        <img src="images/youtube.png" alt="youtube"></a>
+                        <img src="images/youtube.png" alt="youtube" title="Youtube"></a>
                     </div>
                     <br>
                     <div class="link">
                     <a href="https://www.instagram.com/maaz_not_mass/" target="_blank">
-                        <img src="images/instagram.png" alt="instagram"></a>
+                        <img src="images/instagram.png" alt="instagram" title="Instagram"></a>
                     </div>
                     <br>
                     <div class="link">
                     <a href="https://open.spotify.com/playlist/4sHXzttTJvShgmbv7f15iM?si=97ea5a2cde61413d" target="_blank">
-                        <img src="images/spotify.png" alt="spotify"></a>
+                        <img src="images/spotify.png" alt="spotify" title="Spotify"></a>
                     </div>
                 </div>
             </div>
@@ -70,6 +68,14 @@
                         <h1>Currently playing:</h1>
                         <br>
                         <input type="text" placeholder="Search" />
+                    </div>
+                    <div class="buttons">
+                        <div id="whenSignedOut">
+                            <button id="signInbtn">Sign in with Google</button>
+                        </div>
+                        <div id="whenSignedIn" hidden="true">
+                            <button id="signOutbtn">Sign out</button>
+                        </div>
                     </div>
                 </div>
                 <div class="details">
@@ -110,16 +116,10 @@
                 </div>
             </div>
         </div>
-        <div class="buttons">
-            <div id="whenSignedOut">
-                <button id="signInbtn">Sign in with Google</button>
-            </div>
-            <div id="whenSignedIn" hidden="true">
-                <div id="userDetails"></div>
-                <button id="signOutbtn">Sign out</button>
-            </div>
-        </div>
     </main>
+    <div class="extra">
+        <img src="images/controller.png" alt="" title="Dasher">
+    </div>
     <div class="circle1"></div>
     <div class="circle2"></div>
 </body>

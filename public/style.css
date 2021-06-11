@@ -5,10 +5,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.user h1 {
+.user h1, .user img {
     padding: 10px;
 }
-.user h3 {
+p {
     padding-bottom: 10px;
 }
 
@@ -57,6 +57,7 @@ main {
 .user {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     border-bottom: 1px solid black;
 }
@@ -165,4 +166,22 @@ input:hover, input:focus {
     flex: 1;
     align-items: baseline;
     padding-right: 15px;
+}
+
+.buttons button {
+    border-radius: 2rem;
+    width: 130px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+}
+
+.buttons button:hover {
+    background: white;
+}
+
+.extra {
+    position: absolute;
+    bottom: 1%;
+    left: 95%;
 }

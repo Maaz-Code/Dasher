@@ -16,11 +16,11 @@ auth.onAuthStateChanged (user => {
     if (user) {
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
-        userDetails.innerHTML = `<h3>${user.displayName}</h3>`;
+        userDetails.innerHTML = `<h1>${user.displayName}</h1> <p>${user.email}</p>`;
     } 
     else {
         whenSignedIn.hidden = true;
         whenSignedOut.hidden = false;
-        userDetails.innerHTML = '';
+        userDetails.innerHTML = '<h1>Profile</h1> <br>';
     }
 });
