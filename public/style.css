@@ -4,9 +4,32 @@
     box-sizing: border-box;
 }
 
+* > button, .formButton {
+    overflow: hidden;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+}
+
+* > button::after, .formButton::after {
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+}
+
+* > button:hover, .formButton:hover {
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+* > button:hover::after, .formButton:hover::after{
+    transform: translate(0,0);
+}
+
 .user h1, .user img {
     padding: 10px;
 }
+
 p {
     padding-bottom: 10px;
 }
@@ -45,15 +68,15 @@ main {
 }
 
 .circle1,.circle2{
-    background: rgb(217, 241, 245);
+    background: rgba(255, 255, 255, 0.3);
     height: 30vh;
     width: 30vh;
-    opacity: 40%;
     position: absolute;
     border-radius: 10rem;
     z-index: 2;
     filter: blur(2px);
 }
+
 .circle1 {
     bottom: 4%;
     right: 80%;
@@ -186,6 +209,7 @@ input:hover, input:focus {
     height: 30px;
     background: rgba(255, 255, 255, 0.6);
     font-weight: bold;
+    font-family: 'Raleway', sans-serif;
 }
 
 .buttons button:hover {
@@ -198,15 +222,15 @@ input:hover, input:focus {
     right: 1%;
 }
 
-.form {
+.formButton {
     margin-bottom: 10px;
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 4px 4px 15px rgba(11, 12, 12, 0.3);
     border-radius: 1rem;
 }
 
-.form:hover {
-    background: rgba(255, 255, 255, 0.7);
+.formButton:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
 
 #filler > img {
