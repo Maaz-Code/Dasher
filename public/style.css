@@ -57,8 +57,7 @@ main {
     background: white;
     min-height: 80vh;
     width: 70%;
-    /* opacity: 50%; we can't use this as all elements inside glass class will be then opaque.*/
-    border-radius: 2rem; /*rem instead of px as it looks same on anyone else's computer too */
+    border-radius: 2rem;
     z-index: 3;
     background: linear-gradient(
                 to right bottom, 
@@ -239,4 +238,17 @@ input:hover, input:focus {
     position: absolute;
     left: 45%;
     opacity: 90%;
+}
+
+#symbol > img {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    height: 80px;
+    width: 80px;
+    transition: transform 1s ease-in-out;
+}
+
+#symbol:hover > img {
+    transform: rotate(360deg);
 }

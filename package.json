@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Maaz-Code/Glass-Website#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-gyp-build": "^4.2.3"
   }
 }
