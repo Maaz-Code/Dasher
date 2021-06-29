@@ -4,26 +4,28 @@
     box-sizing: border-box;
 }
 
-* > button, .formButton {
-    overflow: hidden;
-    transition: .2s transform ease-in-out;
-    will-change: transform;
-}
-
-* > button::after, .formButton::after {
-    transform: translate(-100%, 0) rotate(10deg);
-    transform-origin: top left;
-    transition: .2s transform ease-in-out;
-    will-change: transform;
-}
-
-* > button:hover, .formButton:hover {
-    transform: scale(1.05);
-    will-change: transform;
-}
-
-* > button:hover::after, .formButton:hover::after{
-    transform: translate(0,0);
+* {
+    button, .formButton {
+        overflow: hidden;
+        transition: .2s transform ease-in-out;
+        will-change: transform;
+    }
+    
+    button::after, .formButton::after {
+        transform: translate(-100%, 0) rotate(10deg);
+        transform-origin: top left;
+        transition: .2s transform ease-in-out;
+        will-change: transform;
+    }
+    
+    button:hover, .formButton:hover {
+        transform: scale(1.05);
+        will-change: transform;
+    }
+    
+    button:hover::after, .formButton:hover::after{
+        transform: translate(0,0);
+    }
 }
 
 .user h1, .user img {
@@ -38,10 +40,9 @@ p {
     position: absolute;
     top: 1%;
     left: 1%;
-}
-
-.logo > h1 {
-    font-family: 'Lobster Two', cursive;
+    h1 {
+        font-family: 'Lobster Two', cursive;
+    }
 }
 
 main {
@@ -73,7 +74,7 @@ main {
     position: absolute;
     border-radius: 10rem;
     z-index: 2;
-    filter: blur(2px);
+    filter: blur(1.5px);
 }
 
 .circle1 {
@@ -92,14 +93,13 @@ main {
     justify-content: center;
     flex-direction: column;
     border-bottom: 1px solid black;
-}
-
-.user img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
+    img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+    }    
 }
 
 .dashboard {
@@ -174,25 +174,23 @@ main {
     flex-direction: column;
     padding: 20px;
     flex: 2;
-}
-
-.current input {
-    border-radius: 2rem;
-    border: none;
-    background: linear-gradient(
-                to right bottom, 
-                rgba(255,255,255,0.8),
-                rgba(255,255,255,0.5));
-    width: 50%;
-    height: 13%;
-    padding: 5px;
-}
-
-input:hover, input:focus {
-    width: 60%;
-    height: 16%;
-    transition: 0.5s;
-    outline: none;
+    input {
+        border-radius: 2rem;
+        border: none;
+        background: linear-gradient(
+                    to right bottom, 
+                    rgba(255,255,255,0.8),
+                    rgba(255,255,255,0.5));
+        width: 50%;
+        height: 13%;
+        padding: 5px;
+    }
+    input:hover, input:focus {
+        width: 60%;
+        height: 16%;
+        transition: 0.5s;
+        outline: none;
+    }
 }
 
 .upper {
@@ -202,17 +200,20 @@ input:hover, input:focus {
     padding-right: 15px;
 }
 
-.buttons button {
-    border-radius: 2rem;
-    width: 130px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.6);
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-}
-
-.buttons button:hover {
-    background: white;
+.buttons {
+    button {
+        border-radius: 2rem;
+        width: 130px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.6);
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        border: 1px solid black;
+    }
+    
+    button:hover {
+        background: white;
+    }
 }
 
 .extra {
@@ -240,15 +241,17 @@ input:hover, input:focus {
     opacity: 90%;
 }
 
-#symbol > img {
-    position: absolute;
-    top: 50%;
-    left: 23%;
-    height: 80px;
-    width: 80px;
-    transition: transform 1s ease-in-out;
-}
-
-#symbol:hover > img {
-    transform: rotate(360deg);
+#symbol {
+    img {
+        position: absolute;
+        top: 50%;
+        left: 23%;
+        height: 80px;
+        width: 80px;
+        transition: transform 1s ease-in-out;
+    }
+    
+    img:hover {
+        transform: rotate(360deg);
+    }
 }
